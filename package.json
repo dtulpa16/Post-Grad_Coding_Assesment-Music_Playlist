@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dtulpa16/Post-Grad_Coding_Assesment-Music_Playlist.git"
+    "url": "git+https://github.com/dtulpa16/Post-Grad_Coding_Assessment-Music_Playlist.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dtulpa16/Post-Grad_Coding_Assesment-Music_Playlist/issues"
+    "url": "https://github.com/dtulpa16/Post-Grad_Coding_Assessment-Music_Playlist/issues"
   },
-  "homepage": "https://github.com/dtulpa16/Post-Grad_Coding_Assesment-Music_Playlist#readme",
+  "homepage": "https://github.com/dtulpa16/Post-Grad_Coding_Assessment-Music_Playlist#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
