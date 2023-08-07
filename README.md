@@ -22,11 +22,11 @@ This backend is designed to handle all operations associated with this Music Pla
 2. **Installation Steps**
 - Clone the repository.
    ```bash
-   git clone https://github.com/dtulpa16/Post-Grad_Coding_Assesment-Music_Playlist.git
+   git clone https://github.com/dtulpa16/Post-Grad_Coding_Assessment-Music_Playlist.git
    
 - Navigate to the backend directory.
   ```bash
-  cd Post-Grad_Coding_Assesment-Music_Playlist
+  cd Post-Grad_Coding_Assessment-Music_Playlist
 - Install the required packages.
   ```bash
   npm install
