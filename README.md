@@ -70,11 +70,11 @@ After starting the server, you can interact with the API via tools like [Postman
 
 | Method | Endpoint            | Description                              |
 |--------|---------------------|------------------------------------------|
-| `GET`  | `api/playlists/`        | Fetch all playlists                      |
-| `POST` | `api/playlists/`                 | Create a new playlist                    |
-| `GET`  | `api/playlists/:playlistName`    | Access a playlist by its unique name     |
-| `PUT`  | `api/playlists/:playlistName`    | Modify a playlist by its unique name     |
-| `DELETE` | `api/playlists/:playlistName`  | Delete a playlist by its unique name     |
+| `GET`  | `api/playlist/`        | Fetch all playlists                      |
+| `POST` | `api/playlist/`                 | Create a new playlist                    |
+| `GET`  | `api/playlist/:playlistName`    | Access a playlist by its unique name     |
+| `PUT`  | `api/playlist/:playlistName`    | Modify a playlist by its unique name     |
+| `DELETE` | `api/playlist/:playlistName`  | Delete a playlist by its unique name     |
 
 ## Data Structures
 
@@ -116,7 +116,7 @@ After starting the server, you can interact with the API via tools like [Postman
     "primaryGenreName": "string",
     "isStreamable": "boolean"
 }
-
+```
 ### **Playlist Data Structure**:
 
 ```json
@@ -124,3 +124,4 @@ After starting the server, you can interact with the API via tools like [Postman
   "playlistName": "String",
   "songs": "Array[] of Songs"
 }
+```
