@@ -15,15 +15,15 @@ Welcome to the Music Playlist Platform! This is a full-stack application designe
   
 - **Song Management**:
     - **Create**: Add new songs to the collection.
-    - **View**: Fetch song details using trackId.
-    - **Update**: Edit song details using trackId.
-    - **Delete**: Remove a song using its trackId.
+    - **View**: Fetch song details using songId.
+    - **Update**: Edit song details using songId.
+    - **Delete**: Remove a song using its songId.
 
 - **Playlist Management**:
     - **Create**: Forge new personalized playlists.
-    - **View**: Access playlists by their unique names.
-    - **Edit**: Modify playlists by their unique names.
-    - **Delete**: Delete playlists by their names.
+    - **View**: Access playlists by their IDs.
+    - **Edit**: Modify playlists by their IDs.
+    - **Delete**: Delete playlists by their IDs.
 ## Installation
 
 1. **Prerequisites**
@@ -62,19 +62,19 @@ After starting the server, you can interact with the API via tools like [Postman
 |--------|-------------------|------------------------------------|
 | `GET`  | `api/music/`               | Fetch all songs                    |
 | `POST` | `api/music/`               | Add a new song                     |
-| `GET`  | `api/music/:trackId`       | Retrieve details of a specific song using its ID |
-| `PUT`  | `api/music/:trackId`       | Update a song using its ID         |
-| `DELETE`| `api/music/:trackId`      | Remove a song using its ID         |
+| `GET`  | `api/music/:songId`       | Retrieve details of a specific song using its ID |
+| `PUT`  | `api/music/:songId`       | Update a song using its ID         |
+| `DELETE`| `api/music/:songId`      | Remove a song using its ID         |
 
 ### **Playlist Endpoints:**
 
 | Method | Endpoint            | Description                              |
 |--------|---------------------|------------------------------------------|
-| `GET`  | `api/playlists/`        | Fetch all playlists                      |
-| `POST` | `api/playlists/`                 | Create a new playlist                    |
-| `GET`  | `api/playlists/:playlistName`    | Access a playlist by its unique name     |
-| `PUT`  | `api/playlists/:playlistName`    | Modify a playlist by its unique name     |
-| `DELETE` | `api/playlists/:playlistName`  | Delete a playlist by its unique name     |
+| `GET`  | `api/playlist/`        | Fetch all playlists                      |
+| `POST` | `api/playlist/`                 | Create a new playlist                    |
+| `GET`  | `api/playlist/:playlistId`    | Access a playlist by its unique name     |
+| `PUT`  | `api/playlist/:playlistId`    | Modify a playlist by its unique name     |
+| `DELETE` | `api/playlist/:playlistId`  | Delete a playlist by its unique name     |
 
 ## Data Structures
 
@@ -82,45 +82,35 @@ After starting the server, you can interact with the API via tools like [Postman
 
 ```json
 {
-    "wrapperType": "string",
-    "kind": "string",
+    "id": "number",
     "artistId": "number",
     "collectionId": "number",
     "trackId": "number",
     "artistName": "string",
     "collectionName": "string",
     "trackName": "string",
-    "collectionCensoredName": "string",
-    "trackCensoredName": "string",
-    "collectionArtistId": "number",
-    "collectionArtistName": "string",
-    "artistViewUrl": "string",
-    "collectionViewUrl": "string",
     "trackViewUrl": "string",
     "previewUrl": "string",
     "artworkUrl30": "string",
     "artworkUrl60": "string",
     "artworkUrl100": "string",
-    "collectionPrice": "number",
     "trackPrice": "number",
-    "releaseDate": "string",
-    "collectionExplicitness": "string",
-    "trackExplicitness": "string",
-    "discCount": "number",
-    "discNumber": "number",
+    "releaseDate": "Date",
     "trackCount": "number",
     "trackNumber": "number",
     "trackTimeMillis": "number",
     "country": "string",
     "currency": "string",
     "primaryGenreName": "string",
-    "isStreamable": "boolean"
+    "playlists": "Playlist[]"
 }
-
+```
 ### **Playlist Data Structure**:
 
 ```json
 {
-  "playlistName": "String",
-  "songs": "Array[] of Songs"
+    "id": "number",
+    "playlistName": "string",
+    "songs": "Song[]"
 }
+```
