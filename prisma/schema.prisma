@@ -11,31 +11,31 @@ datasource db {
 }
 
 model Song {
-    id                   Int        @id @default(autoincrement())
-    artistId             Int
-    collectionId         Int
-    trackId              Int
-    artistName           String
-    collectionName       String
-    trackName            String
-    trackViewUrl         String
-    previewUrl           String
-    artworkUrl30         String
-    artworkUrl60         String
-    artworkUrl100        String
-    trackPrice           Float
-    releaseDate          DateTime
-    trackCount           Int
-    trackNumber          Int
-    trackTimeMillis      Int
-    country              String
-    currency             String
-    primaryGenreName     String
-    playlists            Playlist[] @relation("PlaylistToSong")
+  id               Int        @id @default(autoincrement())
+  artistId         Int
+  collectionId     Int
+  trackId          Int
+  artistName       String
+  collectionName   String
+  trackName        String
+  trackViewUrl     String
+  previewUrl       String
+  artworkUrl30     String
+  artworkUrl60     String
+  artworkUrl100    String
+  trackPrice       Float
+  releaseDate      DateTime
+  trackCount       Int
+  trackNumber      Int
+  trackTimeMillis  Int
+  country          String
+  currency         String
+  primaryGenreName String
+  playlists        Playlist[] @relation("PlaylistToSong")
 }
 
 model Playlist {
-    id          Int        @id @default(autoincrement())
-    playlistName String    @unique
-    songs       Song[]     @relation("PlaylistToSong")
+  id           Int    @id @default(autoincrement())
+  playlistName String @unique
+  songs        Song[] @relation("PlaylistToSong")
 }
